@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursary Application - PAEF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('/assets/school-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(10px);
+            z-index: -1;
+            transform: scale(1.1);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            border-radius: 0.5rem;
+        }
+
+        .btn-danger {
+            margin-top: 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">PAEF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu bg-danger text-light" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item bg-danger text-light" href="about-us.html">About</a></li>
+                            <li><a class="dropdown-item bg-danger text-light" href="history.html">Our History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item bg-danger text-light" href="trustees.html">Trustees</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="bursaries.html" class="nav-link">Bursaries</a></li>
+
+                    <li class="nav-item"><a href="#" class="nav-link">Alumni</a></li>
+
+                    <li class="nav-item"><a href="#" class="nav-link">Support Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mb-4">
+        <div class="header">
+            <h1>Bursary Application</h1>
+            <p>Please fill out the form below to apply for a bursary.</p>
+        </div>
+        <form action="/submit-application" method="POST">
+            <!-- Bursary Selection -->
+            <div class="form-group">
+                <label>Please check off the bursaries that you are applying for:</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="scammellBursary" name="bursary[]" value="Scammell Bursary">
+                    <label class="form-check-label" for="scammellBursary">Scammell Bursary</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="macdonaldBursary" name="bursary[]" value="Bill and Roslyn MacDonald Bursary">
+                    <label class="form-check-label" for="macdonaldBursary">Bill and Roslyn MacDonald Bursary</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="roachBursary" name="bursary[]" value="Chester and Barbara Roach Bursary">
+                    <label class="form-check-label" for="roachBursary">Chester and Barbara Roach Bursary</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="huelinBursary" name="bursary[]" value="Frank I. Huelin Bursary">
+                    <label class="form-check-label" for="huelinBursary">Frank I. Huelin Bursary</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="blenkhorneBursary" name="bursary[]" value="Donald Blenkhorne Bursary">
+                    <label class="form-check-label" for="blenkhorneBursary">Donald Blenkhorne Bursary</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pa200Bursary" name="bursary[]" value="PA 200 Bursary">
+                    <label class="form-check-label" for="pa200Bursary">PA 200 Bursary</label>
+                </div>
+            </div>
+            
+            <!-- Personal Information -->
+            <h4>Personal Information</h4>
+            <div class="form-group">
+                <label for="fullName">Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <!-- Education Information -->
+            <div class="form-group">
+                <label>Attending:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="university" name="attending" value="University" required>
+                    <label class="form-check-label" for="university">University</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="college" name="attending" value="College" required>
+                    <label class="form-check-label" for="college">College</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="institutionName">Name of the university or college you plan to attend</label>
+                <input type="text" class="form-control" id="institutionName" name="institutionName" required>
+            </div>
+            <div class="form-group">
+                <label for="program">Program of study</label>
+                <input type="text" class="form-control" id="program" name="program" required>
+            </div>
+
+            <!-- Scholastic Achievements -->
+            <h4>Scholastic Achievements</h4>
+            <div class="form-group">
+                <label for="achievements">Please list any academic achievements and recognitions at the high school level</label>
+                <textarea class="form-control" id="achievements" name="achievements" rows="4" required></textarea>
+            </div>
+
+            <!-- Extracurricular and Volunteer Activities -->
+            <h4>Extracurricular and Volunteer Activities, Hobbies and Special Interests</h4>
+            <div class="form-group">
+                <label for="activities">Please list your participation in extracurricular and volunteer activities, and indicate when you were involved in these activities</label>
+                <textarea class="form-control" id="activities" name="activities" rows="4" required></textarea>
+            </div>
+
+            <!-- Work Experience -->
+            <h4>Work Experience</h4>
+            <div class="form-group">
+                <label for="workExperience">Please list any paid or unpaid jobs that you have had</label>
+                <textarea class="form-control" id="workExperience" name="workExperience" rows="4" required></textarea>
+            </div>
+
+            <!-- Personal Need -->
+            <h4>Personal Need</h4>
+            <div class="form-group">
+                <label for="personalNeed">Please describe your personal and family circumstances that are relevant to this application</label>
+                <textarea class="form-control" id="personalNeed" name="personalNeed" rows="4" required></textarea>
+            </div>
+
+            <!-- Future Goals -->
+            <h4>Future Goals</h4>
+            <div class="form-group">
+                <label for="futureGoals">Please write a short statement (350-word maximum) that addresses your future goals</label>
+                <textarea class="form-control" id="futureGoals" name="futureGoals" rows="4" required></textarea>
+            </div>
+
+            <!-- References -->
+            <h4>References</h4>
+            <div class="form-group">
+                <label for="reference1Name">Reference 1 (academic)</label>
+                <input type="text" class="form-control" id="reference1Name" name="reference1Name" required>
+            </div>
+            <div class="form-group">
+                <label for="reference1Position">Position</label>
+                <input type="text" class="form-control" id="reference1Position" name="reference1Position" required>
+            </div>
+            <div class="form-group">
+                <label for="reference1Phone">Phone Number</label>
+                <input type="tel" class="form-control" id="reference1Phone" name="reference1Phone" required>
+            </div>
+            <div class="form-group">
+                <label for="reference2Name">Reference 2</label>
+                <input type="text" class="form-control" id="reference2Name" name="reference2Name" required>
+            </div>
+            <div class="form-group">
+                <label for="reference2Position">Position</label>
+                <input type="text" class="form-control" id="reference2Position" name="reference2Position" required>
+            </div>
+            <div class="form-group">
+                <label for="reference2Phone">Phone Number</label>
+                <input type="tel" class="form-control" id="reference2Phone" name="reference2Phone" required>
+            </div>
+
+            <!-- PA 200 Significance -->
+            <h4>Pictou Academy 200 Significance (only complete this section if applying for a PA 200 Bursary)</h4>
+            <div class="form-group">
+                <label for="pa200Significance">Please write a short statement (300-word maximum) that describes how attending Pictou Academy has made a difference in your development</label>
+                <textarea class="form-control" id="pa200Significance" name="pa200Significance" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-danger">Submit Application</button>
+        </form>
+    </div>
+
+    <div class="footer bg-danger text-light">
+        <p>&copy; 2024 Pictou Academy Education Foundation. All rights reserved.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

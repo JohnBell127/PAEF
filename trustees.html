@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trustees - PAEF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('/assets/school-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(10px);
+            z-index: -1;
+            transform: scale(1.1);
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .trustee {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .trustee img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .trustee-info {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">PAEF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu bg-danger text-light" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item bg-danger text-light" href="about-us.html">About</a></li>
+                            <li><a class="dropdown-item bg-danger text-light" href="history.html">Our History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item bg-danger text-light" href="trustees.html">Trustees</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="bursaries.html" class="nav-link">Bursaries</a></li>
+
+                    <li class="nav-item"><a href="#" class="nav-link">Alumni</a></li>
+
+                    <li class="nav-item"><a href="#" class="nav-link">Support Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content mb-4">
+        <h1 class="mb-4">Trustees</h1>
+        <div class="trustee">
+            <img src="assets/Empty-pfp.jpeg" alt="Trustee 1">
+            <div class="trustee-info">
+                <h5>John Doe</h5>
+                <p>John Doe is a dedicated trustee with over 20 years of experience in educational foundations. His commitment to supporting students is unparalleled.</p>
+            </div>
+        </div>
+        <div class="trustee">
+            <img src="assets/Empty-pfp.jpeg" alt="Trustee 2">
+            <div class="trustee-info">
+                <h5>Jane Smith</h5>
+                <p>Jane Smith brings a wealth of knowledge and experience in community service and educational initiatives. She has been a trustee for 15 years.</p>
+            </div>
+        </div>
+        <div class="trustee">
+            <img src="assets/Empty-pfp.jpeg" alt="Trustee 3">
+            <div class="trustee-info">
+                <h5>Robert Brown</h5>
+                <p>Robert Brown is a passionate advocate for education and has been instrumental in numerous fundraising efforts for the foundation.</p>
+            </div>
+        </div>
+        <!-- Add more trustees as needed -->
+    </div>
+
+    <!-- Footer -->
+    <div class="footer bg-danger text-light">
+        <p>&copy; 2024 Pictou Academy Education Foundation. All rights reserved.</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
